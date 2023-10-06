@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 from sklearn.model_selection import train_test_split
 import pandas as pd
@@ -11,6 +12,9 @@ modelo_ha = pickle.load(open('./models/model_ha.pkl','rb'))
 
 
 app = Flask(__name__)
+
+CORS(app)
+https://gitlab.com/hack-for-change-city-solutions/previnabem
 
 port = 8001
 

@@ -12,6 +12,8 @@ modelo_ha = pickle.load(open('./models/model_ha.pkl','rb'))
 
 app = Flask(__name__)
 
+port = 8001
+
 @app.route('/')
 def home():
     return "API rodando"
@@ -98,4 +100,4 @@ def cotacao_heart_attack():
     return jsonify(probabilidade_heart_attack=probabilidade_doenca_ha[0][0])
 
 
-app.run(debug=True, host='0.0.0.0')
+app.run(debug=True, host='0.0.0.0', port=8001)

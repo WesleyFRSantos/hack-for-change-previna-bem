@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  python-ml-app:
+    image: python-ml-app:latest  # Nome da imagem Docker para sua aplicação de Machine Learning
+    ports:
+      - "5000:5000"  # Mapeamento da porta do contêiner para a porta do host
+    volumes:
+      - ./main:/main  # Mapeamento de um diretório local para o diretório do contêiner
+    environment:
+      - DEBUG=true
+
+
